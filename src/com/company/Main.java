@@ -5,17 +5,14 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        myMethod(getRandomAge(), 28);
-        myMethod(getRandomAge(), -11);
-        myMethod(getRandomAge(), 20);
-        myMethod(getRandomAge(), 5);
-        myMethod(getRandomAge(), 55);
+        System.out.println(myMethod(getRandomAge(), -11));
+        System.out.println(myMethod(getRandomAge(), 28));
+        System.out.println(myMethod(getRandomAge(), 20));
+        System.out.println(myMethod(getRandomAge(), 5));
+        System.out.println(myMethod(getRandomAge(), 55));
 
     }
-
-    public static boolean myMethod(int age, int temperature) {
-        String result = "Возраст = " + age + " Температура на улице = " + temperature + "C";
-        System.out.println(result);
+    public static String myMethod(int age, int temperature) {
         if (age >= 20 && age <= 45 && temperature >= -10 && temperature <= 30) {
             System.out.println("Можно идти гулять");
         } else if (age < 20 && temperature <= 0 && temperature <= 28) {
@@ -25,7 +22,7 @@ public class Main {
         } else {
             System.out.println("Оставайся дома");
         }
-        return true;
+        return "Возраст = " + age + " Температура на улице = " + temperature + "C";
     }
 
     public static int getRandomAge() {
